@@ -14,7 +14,6 @@ function UpdatePass() {
     useEffect(() => {
 
         async function verifytoken() {
-            console.log(id, token)
             let isValid = await fetch(`https://authentication-server-gaxu.onrender.com/token-verify/${id}/${token}`, {
                 method: "GET",
                 headers: {
@@ -22,7 +21,6 @@ function UpdatePass() {
                 }
             })
             let response = await isValid.json();
-            console.log(response)
             if (response.ok) {
                 setShow(false);
             } else {
@@ -85,9 +83,9 @@ function UpdatePass() {
             {show ? <div>
 
                 <div className='d-flex justify-content-center align-items-center'><div class="spinner-border" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
+               
                     <span className='ms-3'>Verifying.... Please wait</span>
+                </div>
                 </div>
 
             </div>
@@ -107,12 +105,12 @@ function UpdatePass() {
                                     name='password'
                                     value={password}
                                     required
-                                    onChange={handleChange}
+                                    onChange={handlePasswordChange}
                                 />
                             </div>
                             {show && <p className='error mt-2' style={{ textAlign: "center" }}>{msg}</p>}
                             <div className='btn-div mt-4'>
-                                <button className='btn bg-success fw-semibold' style={{ background: "#00CCFF", color: "white", textAlign: "center", width: "30%" }} disabled={disable}>{btn}</button>
+                                <button className='btn bg-success fw-semibold' style={{ background: "#00CCFF", color: "white", textAlign: "center", width: "30%" }} disabled={enable}>{btn}</button>
                             </div>
                             <div className='mt-2'>
                             
