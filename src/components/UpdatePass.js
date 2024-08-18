@@ -81,7 +81,7 @@ function UpdatePass() {
         setShow1(false);
     }
     return (
-        <div className='update-div d-flex justify-content-center align-items-center min-vh-100'>
+        <div className='signup-div update-div d-flex justify-content-center align-items-center min-vh-100'>
             {show ? <div>
 
                 <div className='d-flex justify-content-center align-items-center'><div class="spinner-border" role="status">
