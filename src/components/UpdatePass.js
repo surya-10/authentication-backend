@@ -81,7 +81,7 @@ function UpdatePass() {
         setShow1(false);
     }
     return (
-        <div className='signup-div update-div d-flex justify-content-center align-items-center min-vh-100'>
+        <div className='signup-div login-div update-div d-flex justify-content-center align-items-center min-vh-100'>
             {show ? <div>
 
                 <div className='d-flex justify-content-center align-items-center'><div class="spinner-border" role="status">
@@ -92,11 +92,11 @@ function UpdatePass() {
 
             </div>
                 :
-                <div className='signup-div d-flex justify-content-center align-items-center min-vh-100'>
+                <div className='signup-div login-div d-flex justify-content-center align-items-center min-vh-100'>
                     <div className='container my-sign-div d-flex justify-content-center align-items-center pt-5 pb-5'>
                         <form onSubmit={handleSubmit}>
                             <div className='form' style={{ padding: "30px 10px", width: "380px", borderRadius: "10px", boxShadow: "rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px" }}>
-                                <p className='fw-bolder text-dark fs-5 forgot mb-3'>Update new password</p>
+                                <p className='fw-bolder text-white fs-5 forgot mb-3'>Update new password</p>
                                 <div className='d-flex justify-content-center'>
                                     <img src={add} alt='Signup avatar' className='signup-avatar' style={{ width: "90px", height: "90px", marginRight: "10px" }} />
                                 </div>
