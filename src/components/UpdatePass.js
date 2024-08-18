@@ -83,14 +83,14 @@ function UpdatePass() {
             {show ? <div>
 
                 <div className='d-flex justify-content-center align-items-center'><div class="spinner-border" role="status">
-               
-                    <span className='ms-3'>Verifying.... Please wait</span>
+                    <span class="visually-hidden">Loading...</span>
                 </div>
+                    <span className='ms-3'>Verifying.... Please wait</span>
                 </div>
 
             </div>
                 :
-                <div className='signup-div login-div d-flex justify-content-center align-items-center min-vh-100'>
+                <div className='login-div d-flex justify-content-center align-items-center min-vh-100'>
                     <div className='container my-sign-div d-flex justify-content-center align-items-center pt-5 pb-5'>
                     <div className='my-form'>
                     <form onSubmit={handleSubmit}>
