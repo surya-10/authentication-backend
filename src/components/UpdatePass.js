@@ -81,7 +81,7 @@ function UpdatePass() {
         setShow1(false);
     }
     return (
-        <div className='signup-div login-div update-div d-flex justify-content-center align-items-center min-vh-100'>
+        <div className='update-div d-flex justify-content-center align-items-center min-vh-100'>
             {show ? <div>
 
                 <div className='d-flex justify-content-center align-items-center'><div class="spinner-border" role="status">
@@ -94,29 +94,32 @@ function UpdatePass() {
                 :
                 <div className='signup-div login-div d-flex justify-content-center align-items-center min-vh-100'>
                     <div className='container my-sign-div d-flex justify-content-center align-items-center pt-5 pb-5'>
-                        <form onSubmit={handleSubmit}>
-                            <div className='form' style={{ padding: "30px 10px", width: "380px", borderRadius: "10px", boxShadow: "rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px" }}>
-                                <p className='fw-bolder text-white fs-5 forgot mb-3'>Update new password</p>
-                                <div className='d-flex justify-content-center'>
-                                    <img src={add} alt='Signup avatar' className='signup-avatar' style={{ width: "90px", height: "90px", marginRight: "10px" }} />
-                                </div>
-                                <div className='d-flex flex-column justify-content-start align-items-start form-div mt-4'>
-
-                                    <div className='d-flex flex-column justify-content-start align-items-start'>
-                                        <input type='password' placeholder='your password'
-                                            value={password}
-                                            required
-                                            onChange={handlePasswordChange} />
-                                    </div>
-
-                                </div>
-                                {show1 && <p className='error mt-2' style={{ textAlign: "center" }}>{msg}</p>}
-                                <div className='btn-div mt-4'>
-                                <button className='btn bg-success fw-semibold' style={{ background: "#00CCFF", color: "white", textAlign: "center", width: "30%" }} disabled={enable}>{btn}</button>
+                    <div className='my-form'>
+                    <form onSubmit={handleSubmit}>
+                        <div className='form-comp'>
+                            <div className='d-flex justify-content-center mb-3'>
+                                <img src={add} alt='Signup avatar' className='signup-avatar' style={{ width: "90px", height: "90px" }} />
                             </div>
-
+                            <div className='inp-comp d-flex flex-column justify-content-center align-items-stretch' style={{ gap: "20px", width: "350px" }}>
+                                <input
+                                    type='password'
+                                    placeholder='Your password'
+                                    name='password'
+                                    value={password}
+                                    required
+                                    onChange={handleChange}
+                                />
                             </div>
-                        </form>
+                            {show && <p className='error mt-2' style={{ textAlign: "center" }}>{msg}</p>}
+                            <div className='btn-div mt-4'>
+                                <button className='btn bg-success fw-semibold' style={{ background: "#00CCFF", color: "white", textAlign: "center", width: "30%" }} disabled={disable}>{btn}</button>
+                            </div>
+                            <div className='mt-2'>
+                            
+                            </div>
+                        </div>
+                    </form>
+                </div>
                     </div>
                 </div>
             }
