@@ -79,13 +79,13 @@ function UpdatePass() {
         setShow1(false);
     }
     return (
-        <div className='update-div d-flex justify-content-center align-items-center min-vh-100'>
+        <div className='signup-div update-div d-flex justify-content-center align-items-center min-vh-100'>
             {show ? <div>
 
                 <div className='d-flex justify-content-center align-items-center'><div class="spinner-border" role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>
-                    <span className='ms-3'>Verifying.... Please wait</span>
+                    <span className='ms-3 text-white'>Verifying.... Please wait</span>
                 </div>
 
             </div>
